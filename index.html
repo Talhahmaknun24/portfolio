@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Talhah Maknun — Graphic Designer & Developer</title>
+<meta name="description" content="Portfolio of Muhammad Talhah Maknun — Graphic Designer, Founder of Tamaddun Design, and Developer of Tamaddun Keyboard. Logo, branding, Islamic art, Android & Windows apps, and web tools.">
+<style>
+  :root{
+    --emerald:#0a5e44; --emerald-deep:#073427; --emerald-dark:#052a1f;
+    --gold:#be983f; --gold-l:#e6cb8a; --ivory:#faf6ec; --ink:#12211b;
+    --card:#ffffff; --muted:#5c6f66; --line:#e7dfc9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Noto Sans Bengali",sans-serif;background:var(--ivory);color:var(--ink);line-height:1.65}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  /* ---------- Nav ---------- */
+  nav{position:sticky;top:0;z-index:50;background:rgba(7,52,39,.96);backdrop-filter:blur(8px);border-bottom:2px solid var(--gold)}
+  nav .wrap{display:flex;align-items:center;gap:18px;height:64px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;font-size:18px;letter-spacing:.3px}
+  .mono{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--gold),#9a7a2c);color:var(--emerald-dark);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .brand small{display:block;font-size:11px;color:var(--gold-l);font-weight:600;letter-spacing:1.6px;text-transform:uppercase}
+  nav .links{margin-left:auto;display:flex;gap:26px}
+  nav .links a{color:#e9e2cd;font-size:14.5px;font-weight:600}
+  nav .links a:hover{color:var(--gold-l)}
+  .nav-cta{background:var(--gold);color:var(--emerald-dark)!important;padding:8px 18px;border-radius:999px}
+  .nav-cta:hover{background:var(--gold-l)}
+  @media(max-width:760px){nav .links a:not(.nav-cta){display:none}}
+
+  /* ---------- Hero ---------- */
+  header{background:radial-gradient(1100px 480px at 85% -10%,rgba(190,152,63,.28),transparent 60%),linear-gradient(160deg,var(--emerald-deep),var(--emerald-dark) 70%);color:#fff;overflow:hidden}
+  .hero{padding:84px 0 70px;text-align:center}
+  .hero .avatar{width:118px;height:118px;margin:0 auto 22px;border-radius:50%;background:linear-gradient(140deg,var(--gold-l),var(--gold) 55%,#8a6d27);display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:var(--emerald-dark);border:4px solid rgba(230,203,138,.55);box-shadow:0 14px 40px rgba(0,0,0,.45)}
+  .hero h1{font-size:clamp(32px,5.4vw,54px);line-height:1.15;font-weight:800}
+  .hero h1 .bn{display:block;font-size:.52em;color:var(--gold-l);font-weight:600;margin-top:8px;letter-spacing:.4px}
+  .hero .roles{margin-top:16px;font-size:clamp(15px,2.4vw,19px);color:#dfe9df;font-weight:600}
+  .hero .roles b{color:var(--gold-l)}
+  .hero p.tag{max-width:680px;margin:18px auto 0;color:#c8d6cc;font-size:16px}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s}
+  .btn-gold{background:var(--gold);color:var(--emerald-dark)}
+  .btn-gold:hover{background:var(--gold-l);transform:translateY(-2px)}
+  .btn-ghost{border:1.5px solid rgba(230,203,138,.65);color:#fff}
+  .btn-ghost:hover{background:rgba(230,203,138,.12);transform:translateY(-2px)}
+  .stats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:46px}
+  .stat{background:rgba(255,255,255,.06);border:1px solid rgba(230,203,138,.35);border-radius:16px;padding:14px 24px;min-width:138px}
+  .stat b{display:block;font-size:24px;color:var(--gold-l)}
+  .stat span{font-size:12.5px;color:#c8d6cc;letter-spacing:.4px}
+
+  /* ---------- Sections ---------- */
+  section{padding:74px 0}
+  .kicker{text-align:center;color:var(--gold);font-weight:800;letter-spacing:2.6px;font-size:12.5px;text-transform:uppercase}
+  h2.title{text-align:center;font-size:clamp(26px,4vw,36px);font-weight:800;color:var(--emerald-deep);margin:8px 0 10px}
+  .sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 42px;font-size:15.5px}
+  .gold-rule{width:74px;height:3px;background:var(--gold);border-radius:3px;margin:14px auto 0}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;align-items:start}
+  @media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+  .about-txt p{margin-bottom:14px;color:#2c3f36;font-size:16px}
+  .about-txt b{color:var(--emerald)}
+  .info-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 26px rgba(7,52,39,.06)}
+  .info-card h3{color:var(--emerald-deep);font-size:16px;margin-bottom:14px}
+  .info-card li{list-style:none;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14.5px;color:#33473d}
+  .info-card li:last-child{border-bottom:none}
+  .info-card li b{color:var(--emerald);display:inline-block;min-width:86px}
+
+  /* Flagship */
+  .flagship{background:linear-gradient(150deg,var(--emerald-deep),var(--emerald) 130%);border-radius:26px;color:#fff;padding:44px;box-shadow:0 22px 50px rgba(7,52,39,.28)}
+  @media(max-width:640px){.flagship{padding:30px 24px}}
+  .flagship .badge{display:inline-block;background:var(--gold);color:var(--emerald-dark);font-weight:800;font-size:12px;letter-spacing:1.6px;padding:6px 14px;border-radius:999px;text-transform:uppercase}
+  .flagship h3{font-size:clamp(24px,3.6vw,34px);margin:16px 0 6px}
+  .flagship h3 span{color:var(--gold-l)}
+  .flagship p{color:#d5e2d8;max-width:760px;font-size:15.5px}
+  .feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin-top:26px}
+  .feat div{background:rgba(255,255,255,.07);border:1px solid rgba(230,203,138,.3);border-radius:14px;padding:15px 17px;font-size:14.5px}
+  .feat b{color:var(--gold-l);display:block;margin-bottom:3px;font-size:15px}
+
+  /* Skills */
+  .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:820px){.skills-grid{grid-template-columns:1fr}}
+  .skill-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 8px 26px rgba(7,52,39,.05)}
+  .skill-card h3{color:var(--emerald-deep);font-size:18px;margin-bottom:6px}
+  .skill-card p{color:var(--muted);font-size:14px;margin-bottom:16px}
+  .bar-row{margin-bottom:13px}
+  .bar-row .lab{display:flex;justify-content:space-between;font-size:14px;font-weight:600;color:#2c3f36}
+  .bar-row .lab span{color:var(--gold);font-weight:800}
+  .bar{height:9px;background:#efe8d2;border-radius:99px;overflow:hidden;margin-top:5px}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--emerald),var(--gold));border-radius:99px}
+  .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+  .tags span{background:#eef4ee;border:1px solid #d8e4d8;color:var(--emerald-deep);font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px}
+
+  /* Projects */
+  #projects{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .proj{background:var(--ivory);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.2s;display:flex;flex-direction:column}
+  .proj:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(7,52,39,.12);border-color:var(--gold)}
+  .proj .ico{font-size:30px;margin-bottom:10px}
+  .proj h3{color:var(--emerald-deep);font-size:18px}
+  .proj p{color:var(--muted);font-size:14.5px;margin:7px 0 16px;flex:1}
+  .proj .go{color:var(--emerald);font-weight:800;font-size:14px}
+  .proj .go:hover{color:var(--gold)}
+  .proj .kind{font-size:11px;font-weight:800;letter-spacing:1.4px;color:var(--gold);text-transform:uppercase}
+
+  /* Services */
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+  .svc{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:16px;padding:24px;text-align:center;box-shadow:0 8px 22px rgba(7,52,39,.05)}
+  .svc .ico{font-size:32px}
+  .svc h3{color:var(--emerald-deep);font-size:17px;margin:10px 0 6px}
+  .svc p{color:var(--muted);font-size:14px}
+
+  /* Contact */
+  #contact{background:linear-gradient(160deg,var(--emerald-deep),var(--emerald-dark));color:#fff;text-align:center}
+  #contact h2.title{color:#fff}
+  #contact .sub{color:#c8d6cc}
+  .contact-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+  footer{background:var(--emerald-dark);color:#9db4a6;text-align:center;padding:26px 16px;font-size:13.5px;border-top:1px solid rgba(230,203,138,.25)}
+  footer b{color:var(--gold-l)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mono">TM</span><span>Talhah Maknun<small>Tamaddun Design</small></span></a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap hero">
+    <div class="avatar">TM</div>
+    <h1>Muhammad Talhah Maknun<span class="bn">মুহাম্মদ তালহা মাকনুন</span></h1>
+    <div class="roles">🎨 Graphic Designer &nbsp;•&nbsp; 💻 App Developer &nbsp;•&nbsp; <b>Founder, Tamaddun Design</b></div>
+    <p class="tag">I design brands people remember — and build the digital tools they use every day. Creator of <b style="color:#e6cb8a">Tamaddun Keyboard</b>, a Bengali typing experience for Windows &amp; Android.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://wa.me/8801933988628" target="_blank" rel="noopener">💬 WhatsApp Me</a>
+      <a class="btn btn-ghost" href="#projects">View My Work ↓</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>12K+</b><span>Facebook Followers</span></div>
+      <div class="stat"><b>6</b><span>Live Web Tools</span></div>
+      <div class="stat"><b>3</b><span>Apps Built</span></div>
+      <div class="stat"><b>10+</b><span>Open-Source Projects</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="kicker">About Me</div>
+    <h2 class="title">Designer by passion, developer by craft</h2>
+    <div class="gold-rule"></div>
+    <div style="height:38px"></div>
+    <div class="about-grid">
+      <div class="about-txt">
+        <p>আসসালামু আলাইকুম! I'm <b>Muhammad Talhah Maknun</b>, a graphic designer and software developer from <b>Mymensingh, Bangladesh</b>. I founded <b>Tamaddun Design</b>, a small studio focused on logo design, brand identity and Islamic art.</p>
+        <p>My best-known work is <b>Tamaddun Keyboard</b> — a full-featured Bengali input method for Windows and Android with phonetic typing, Gboard-style layouts, themes, stickers and AI writing tools, used and loved by Bengali typists.</p>
+        <p>Alongside client design work, I build free, practical web tools for the community — a complete Quran app, a PDF toolbox, a school &amp; madrasa management system, and more. I also lead the <b>তাহযিবুল উম্মাহ</b> online Islamic community.</p>
+        <p>Design philosophy: <b>clean, meaningful, and useful</b> — every pixel and every line of code should serve a real person.</p>
+      </div>
+      <div class="info-card">
+        <h3>📋 Quick Info</h3>
+        <ul>
+          <li><b>Location</b> Mymensingh, Bangladesh</li>
+          <li><b>Founder</b> Tamaddun Design</li>
+          <li><b>Developer</b> Tamaddun Keyboard</li>
+          <li><b>Education</b> Dhaka Holy Survey Training Centre</li>
+          <li><b>Community</b> Admin, তাহযিবুল উম্মাহ (Online Islamic Group)</li>
+          <li><b>Email</b> md.talhahmaknun24@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="flagship">
+      <span class="badge">⭐ Flagship Product</span>
+      <h3>Tamaddun <span>Keyboard</span> ⌨️</h3>
+      <p>A professional Bengali keyboard for Windows &amp; Android — phonetic (Ridmik-style) and Gboard-style layouts, built for fast, accurate Bengali typing with a premium emerald &amp; gold identity.</p>
+      <div class="feat">
+        <div><b>6+ Layouts</b>Phonetic, Bangla, Provat, National, English &amp; Arabic — plus 34 extra languages</div>
+        <div><b>Smart Typing</b>Conjunct (যুক্তাক্ষর) support, kar-strip previews, gesture typing &amp; voice input</div>
+        <div><b>Rich Content</b>Themes, photo themes, downloadable sticker &amp; GIF packs, 1000+ emoji</div>
+        <div><b>AI Tools</b>AI writing, translation to 105 languages, and image generation built in</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="padding-top:6px">
+  <div class="wrap">
+    <div class="kicker">Skills</div>
+    <h2 class="title">What I do best</h2>
+    <div class="gold-rule"></div>
+    <p class="sub">A rare mix of visual design and hands-on software development — from a logo sketch to a shipped app.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>🎨 Graphic Design</h3>
+        <p>Brand identities, Islamic art and social media creatives — designed mainly in PixelLab with a personal library of 2,000+ assets.</p>
+        <div class="bar-row"><div class="lab">Logo &amp; Branding <span>95%</span></div><div class="bar"><i style="width:95%"></i></div></div>
+        <div class="bar-row"><div class="lab">Islamic Art &amp; Poster Design <span>93%</span></div><div class="bar"><i style="width:93%"></i></div></div>
+        <div class="bar-row"><div class="lab">Social Media Design <span>90%</span></div><div class="bar"><i style="width:90%"></i></div></div>
+        <div class="bar-row"><div class="lab">Photo Editing <span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
+        <div class="tags"><span>PixelLab</span><span>Logo Design</span><span>Brand Identity</span><span>Islamic Calligraphy Art</span><span>Thumbnail Design</span></div>
+      </div>
+      <div class="skill-card">
+        <h3>💻 Development</h3>
+        <p>Native Android &amp; Windows apps, single-file web tools and small APIs — designed, built and shipped end-to-end.</p>
+        <div class="bar-row"><div class="lab">Android Apps (Java) <span>88%</span></div><div class="bar"><i style="width:88%"></i></div></div>
+        <div class="bar-row"><div class="lab">Windows Apps (C# / WPF) <span>84%</span></div><div class="bar"><i style="width:84%"></i></div></div>
+        <div class="bar-row"><div class="lab">Web Tools (HTML / CSS / JS) <span>90%</span></div><div class="bar"><i style="width:90%"></i></div></div>
+        <div class="bar-row"><div class="lab">APIs (Python / Flask) <span>78%</span></div><div class="bar"><i style="width:78%"></i></div></div>
+        <div class="tags"><span>Android</span><span>WPF</span><span>JavaScript</span><span>Python</span><span>GitHub</span><span>Vercel</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="kicker">Portfolio</div>
+    <h2 class="title">Live projects &amp; tools</h2>
+    <div class="gold-rule"></div>
+    <p class="sub">Every tool below is live and free to use — click any card to try it.</p>
+    <div class="proj-grid">
+      <a class="proj" href="https://quran-steel-five.vercel.app" target="_blank" rel="noopener">
+        <div class="ico">📖</div><div class="kind">Web App</div>
+        <h3>Quran App</h3>
+        <p>The complete Holy Quran with Arabic text, Bengali translation, per-ayah audio, bookmarks and a daily ayah.</p>
+        <span class="go">Open Live →</span>
+      </a>
+      <a class="proj" href="https://pdf-tools-eight-pied.vercel.app" target="_blank" rel="noopener">
+        <div class="ico">📄</div><div class="kind">Web Tool</div>
+        <h3>PdfTools</h3>
+        <p>12 PDF tools in one place — merge, split, rotate, convert, compress, watermark — plus an AI summarizer.</p>
+        <span class="go">Open Live →</span>
+      </a>
+      <a class="proj" href="https://school-dusky-five.vercel.app" target="_blank" rel="noopener">
+        <div class="ico">🏫</div><div class="kind">Web App</div>
+        <h3>School &amp; Madrasa Management</h3>
+        <p>Students, teachers, attendance, fees and results with printable report cards — for schools and madrasas.</p>
+        <span class="go">Open Live →</span>
+      </a>
+      <a class="proj" href="https://photocard-ochre.vercel.app" target="_blank" rel="noopener">
+        <div class="ico">🖼️</div><div class="kind">Web Tool</div>
+        <h3>Photocard</h3>
+        <p>Create beautiful photo cards with ready-made templates — perfect for social media posts and wishes.</p>
+        <span class="go">Open Live →</span>
+      </a>
+      <a class="proj" href="https://eid-selami.vercel.app" target="_blank" rel="noopener">
+        <div class="ico">🌙</div><div class="kind">Web Tool</div>
+        <h3>Eid-Selami</h3>
+        <p>Design festive Eid salami cards in four elegant styles and share them with family and friends.</p>
+        <span class="go">Open Live →</span>
+      </a>
+      <a class="proj" href="https://qr-code-gen-tool.vercel.app" target="_blank" rel="noopener">
+        <div class="ico">🔳</div><div class="kind">Web Tool</div>
+        <h3>QR Code Generator Pro</h3>
+        <p>QR codes for links, WiFi, vCard, SMS and email — with custom colors and your own center logo.</p>
+        <span class="go">Open Live →</span>
+      </a>
+      <a class="proj" href="https://social-media-downloader-api-lake.vercel.app" target="_blank" rel="noopener">
+        <div class="ico">⬇️</div><div class="kind">API</div>
+        <h3>Social Media Downloader API</h3>
+        <p>A free API covering 7 platforms — Facebook, TikTok, Twitter/X, Pinterest and more — powering my downloader app.</p>
+        <span class="go">Open Live →</span>
+      </a>
+      <a class="proj" href="https://github.com/Talhahmaknun24" target="_blank" rel="noopener">
+        <div class="ico">🐙</div><div class="kind">Open Source</div>
+        <h3>GitHub — Talhahmaknun24</h3>
+        <p>All my open-source work: Tamaddun Keyboard sticker server, the tools above, and more experiments.</p>
+        <span class="go">View GitHub →</span>
+      </a>
+      <div class="proj">
+        <div class="ico">📱</div><div class="kind">Android Apps</div>
+        <h3>Tamaddun Apps Family</h3>
+        <p><b>Tamaddun Keyboard</b> (Bengali IME), <b>Tamaddun Admin</b> (content &amp; VIP manager) and <b>Tamaddun Downloader</b> (Snaptube-style media downloader).</p>
+        <span class="go">Ask on WhatsApp for the latest builds →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="kicker">Services</div>
+    <h2 class="title">How I can help you</h2>
+    <div class="gold-rule"></div>
+    <p class="sub">Freelance design and development services — message me on WhatsApp for a quote.</p>
+    <div class="svc-grid">
+      <div class="svc"><div class="ico">🎨</div><h3>Logo &amp; Branding</h3><p>Memorable logos and complete brand identities for businesses, pages and personal brands.</p></div>
+      <div class="svc"><div class="ico">🕌</div><h3>Islamic Art &amp; Posters</h3><p>Calligraphy posters, event banners, mahfil &amp; madrasa designs with authentic Islamic aesthetics.</p></div>
+      <div class="svc"><div class="ico">📱</div><h3>App Development</h3><p>Android &amp; Windows apps and custom keyboards — from idea to a polished, shipped product.</p></div>
+      <div class="svc"><div class="ico">🌐</div><h3>Web Tools &amp; Sites</h3><p>Fast single-page web tools, landing pages and small business websites that just work.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--gold-l)">Contact</div>
+    <h2 class="title">Let's work together</h2>
+    <div class="gold-rule"></div>
+    <p class="sub">Have a design project, an app idea, or just want to say সালাম? I'm one message away.</p>
+    <div class="contact-row">
+      <a class="btn btn-gold" href="https://wa.me/8801933988628" target="_blank" rel="noopener">💬 WhatsApp: +880 1933-988628</a>
+      <a class="btn btn-ghost" href="mailto:md.talhahmaknun24@gmail.com">✉️ Email Me</a>
+      <a class="btn btn-ghost" href="https://facebook.com/Talhahmaknun" target="_blank" rel="noopener">📘 Facebook</a>
+      <a class="btn btn-ghost" href="https://github.com/Talhahmaknun24" target="_blank" rel="noopener">🐙 GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 <b>Muhammad Talhah Maknun</b> • Founder, Tamaddun Design • Developer of Tamaddun Keyboard<br>
+  Mymensingh, Bangladesh 🇧🇩 — Designed &amp; built with ❤️
+</footer>
+
+</body>
+</html>
